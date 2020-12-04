@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        HomePage
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="home.css">
+    <script type="text/javascript">
+        function MoveToLogin(){
+            window.scrollTo(0,document.querySelector(".banner").scrollHeight);
+        }
+
+        window.addEventListener("scroll",function(){
+            const header = document.querySelector('header');
+            header.classList.toggle("sticky",window.scrollY>0);
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="homepage">
+            <div class="logo">
+                <img src="Logo.png" alt="Logo">
+                <a href="Honor.html">Thanks</a>
+                <a href="Payment.html">Payment</a>
+                <a href="Animal.html">Profiles</a>
+                <a href="Login.html">Login</a>
+                <a href="home.html">Homepage</a>
+        </div>
+        <div class="topic">
+            <h2>NoMoreStarving</h2>
+            <input type="button" value="Check out our bio" class="btn0" onclick="MoveToLogin()">
+        </div>
+    </header>
+    <!-- <header2>
+        <ul class="navigation">
+            <li><a href="#">Description</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Expert</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+    </header2> -->
+    <section class="banner" id="banner">
+        <div class="content">
+            <h2>We need your help</h2>
+            <p>
+                NoMoreStarving aims to gather the basic information of all animals in need.
+                 We offer a simple and convenient way for people to donate.
+                 People who want to help the homeless animals can make a donation by simply clicking on our website.
+            </p>
+            <a href="Login.html" class="btn">Login</a>
+        </div>
+    </section>
+
+</body>
+
+</html>

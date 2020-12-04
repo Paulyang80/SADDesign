@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Login
+    </title>
+    <link rel="stylesheet" type="text/css" href="Login.css">
+    <script type="text/javascript">
+        function Login() {
+            var container = document.querySelector('.container');
+            container.classList.toggle('active')
+        }
+        function Blank(){
+            document.getElementById("name").value='';
+            document.getElementById("email").value='';
+            document.getElementById("confirm").value='';
+            document.getElementById("password").value='';
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="homepage">
+            <div class="logo">
+                <img src="Logo.png" alt="Logo">
+                <a href="Honor.html">Thanks</a>
+                <a href="Payment.html">Payment</a>
+                <a href="Animal.html">Profiles</a>
+                <a href="Login.html">Login</a>
+                <a href="home.html">Homepage</a>
+        </div>
+    </header>
+    <section>
+        <div class="container">
+            <div class="user SignBox">
+                <div class="imgBox"><img src="Dog_Home.jpg" alt="" width="333" height="500"></div>
+                <div class="formBox">
+                    <form action="">
+                        <h2>SignIn</h2>
+                        <input type="text" name="" placeholder="Username">
+                        <input type="password" name="" placeholder="Password">
+                        <input type="button" name="" value="Login" onclick="location.href='Animal.html'">
+                        <p class="signup"><a href="#" onclick="Login();" ">Click here</a> if you don't have an account.</p>
+                    </form>
+                </div>
+            </div>
+            <div class="user SignUpBox">
+                <div class="formBox">
+                    <form action="">
+                        <h2>Create an account</h2>
+                        <input type="text" id="name" name="" placeholder="Username">
+                        <input type="email" id="email" name="" placeholder="Email">
+                        <input type="password" id="password" name="" placeholder="Create Password">
+                        <input type="password" id="confirm" name="" placeholder="Confirm Password">
+                        <input type="submit" name="" value="Sign Up" onclick="Blank()">
+                        <p class="signup "><a href="# " onclick="Login(); "">Login in</a> if you already have an account.</p>
+                    </form>
+                </div>
+                <div class="imgBox"><img src="Dog_Home2.jpg" alt="" width="333" height="500"></div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

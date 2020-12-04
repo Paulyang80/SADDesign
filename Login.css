@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Texturina', serif;
+}
+
+header {
+    background:#65472d;
+}
+
+
+header .logo img{
+    width: 15%;
+    height: 15%;
+    padding: 20px;
+}
+
+header .homepage {
+    background-color:none;
+    overflow: hidden;
+  }
+  header .homepage a{
+    float: right;
+    color:#fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Andale Mono, monospace;
+}
+header .homepage a:hover{
+    background: #A9A9A9;
+    color: #000000;
+}
+header .homepage a.active{
+    background-color: #A9A9A9;
+    color: white;
+}
+
+
+section {
+    position: relative;
+    min-height: 100vh;
+    background:#65472d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+section .container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: #d8be9d;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+section .container .user {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+section .container .user .imgBox {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: #d8be9d;
+    transition: 0.5s;
+}
+
+section .container .user .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section .container .user .formBox {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: #d8be9d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    transition: 0.5s;
+}
+
+section .container .user .formBox form h2 {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+section .container .user .formBox form input {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin: 8px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+section .container .user .formBox form input[type="submit"] {
+    max-width: 100px;
+    background: #65472d;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+section .container .user .formBox form input[type="button"] {
+    max-width: 100px;
+    background: #65472d;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+section .container .user .formBox .signup {
+    position: relative;
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #000000;
+    text-transform: uppercase;
+    font-weight: 400px;
+}
+
+section .container .user .formBox .signup a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #0d3172;
+}
+
+section .container .SignUpBox {
+    pointer-events: none;
+}
+
+section .container.active .SignUpBox {
+    pointer-events: initial;
+}
+
+section .container .SignUpBox .formBox {
+    left: 100%;
+}
+
+section .container.active .SignUpBox .formBox {
+    left: 0;
+}
+
+section .container .SignUpBox .imgBox {
+    left: -100%;
+}
+
+section .container.active .SignUpBox .imgBox {
+    left: 0;
+}
+
+section .container .SignBox .formBox {
+    left: 0;
+}
+
+section .container.active .SignBox .formBox {
+    left: 100%;
+}
+
+section .container .SignBox .imgBox {
+    left: 0;
+}
+
+section .container.active .SignBox .imgBox {
+    left: -100%;
+}
