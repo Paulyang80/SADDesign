@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Texturina', serif;
+
+
+}
+
+header {
+    background: url("Payment0.jpg");
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+
+
+header .logo img{
+    width: 15%;
+    height: 15%;
+    padding: 20px;
+}
+
+header .homepage {
+    background-color:none;
+    overflow: hidden;
+  }
+header .homepage a{
+    float: right;
+    color:#fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Andale Mono, monospace;
+}
+header .homepage a:hover{
+    background: #B8860B;
+    color: #000000;
+}
+header .homepage a.active{
+    background-color: #B8860B;
+    color: white;
+}
+
+.small-container{
+    background-color:#FAEBD7;
+}
+
+.cart-page{
+    margin: 10px auto;
+}
+
+table{
+    width: 70%;
+    border-collapse: collapse;
+
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cart-info{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #B8860B;
+    font-weight: normal;
+}
+
+td{
+    padding: 10px 5px;
+}
+
+td input[type="number"]{
+    width:40px;
+    height:30px;
+    padding:5px;
+}
+
+td input[type="text"]{
+    width:120px;
+    height:30px;
+    padding:5px;
+}
+
+td a{
+    color: #B8860B;
+    font-size: 17px;
+}
+
+td img{
+    width:200px;
+    height:122px;
+    margin-right: 10px;
+}
+
+.total-price{
+    display:flex;
+    justify-content: flex-end;
+}
+
+.total-price table{
+    border-top: 3px solid #B8860B;
+    width:100%;
+    max-width:400px;
+}
+
+td:last-child{
+    text-align:right;
+}
+
+th:last-child{
+    text-align:right;
+}
+
+.padding {
+    padding: 5rem !important
+}
+
+.form-control:focus {
+    box-shadow: 10px 0px 0px 0px #ffffff !important;
+    border-color: #4ca746
+}

@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Texturina', serif;
+
+}
+
+header {
+    background: url("animal0.jpg");
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+header .logo img{
+    width: 15%;
+    height: 15%;
+    padding: 20px;
+
+}
+
+header .homepage {
+    background-color:none;
+    overflow: hidden;
+  }
+header .homepage a{
+    float: right;
+    color:#fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Andale Mono, monospace;
+}
+header .homepage a:hover{
+    background: #A9A9A9;
+    color: #000000;
+}
+header .homepage a.active{
+    background-color: #A9A9A9;
+    color: white;
+}
+
+.container{
+    max-width:1200px;
+    margin: auto;
+    background:#f2f2f2;
+    overflow: auto;
+}
+
+.gallery{
+    margin:10;
+    border:15px solid #ccc;
+    background:#f2f2f2;
+    float:left;
+    width:400px
+}
+
+.gallery img{
+    width: 371px;
+    height: 371px;
+    margin-right: 10px;
+    object-fit: cover;
+
+}
+
+.gallery input[type="checkbox"]{
+    height: 25px;
+    width: 25px;
+}
+
+.description{
+    padding:5px;
+    text-align:left;
+    background:#f2f2f2;
+}
+
+.description a{
+    font-size: 25px;
+    border: 3px;
+    padding: 5px;
+
+}
+
+h1{
+    text-align:center;
+}
+
+
+
+.payment input{
+    left: 40%;
+    position: relative;
+    justify-content: center;
+    font-size: 1em;
+    color:#fff;
+    background:#D2691E;
+    display: inline-block;
+    padding:10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing:2px;
+    transition: 0.5s;
+    border:15px;
+
+}

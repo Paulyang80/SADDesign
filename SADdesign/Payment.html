@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <title>Check Out Your Payment</title>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <link rel="stylesheet" type="text/css" href="payment.css">
+            <script type="text/javascript">
+                function calculate(){
+                    document.getElementById("text1").value = parseInt(document.getElementById("number1").value)*980;
+                    document.getElementById("text2").value = parseInt(document.getElementById("number2").value)*1280;
+                    document.getElementById("text3").value = parseInt(document.getElementById("number3").value)*1680;
+                    document.getElementById("text4").value = parseInt(document.getElementById("number4").value)*480;
+                    document.getElementById("text5").value = parseInt(document.getElementById("number5").value)*1080;
+                }
+
+                function total(){
+                    var value= 0;
+                    for(i=1;i<=5;i++ ){
+                        value = value + parseInt(document.getElementById("text"+i).value);
+                    }
+                    document.getElementById("text6").value = value;
+                }
+                $(function($) {
+                    $('[data-numeric]').payment('restrictNumeric');
+                    $('.cc-number').payment('formatCardNumber');
+                    $('.cc-exp').payment('formatCardExpiry');
+                    $('.cc-cvc').payment('formatCardCVC');
+                    $.fn.toggleInputError = function(erred) {
+                    this.parent('.form-group').toggleClass('has-error', erred);
+                    return this;
+                    };
+                    $('form').submit(function(e) {
+                    e.preventDefault();
+                    var cardType = $.payment.cardType($('.cc-number').val());
+                    $('.cc-number').toggleInputError(!$.payment.validateCardNumber($('.cc-number').val()));
+                    $('.cc-exp').toggleInputError(!$.payment.validateCardExpiry($('.cc-exp').payment('cardExpiryVal')));
+                    $('.cc-cvc').toggleInputError(!$.payment.validateCardCVC($('.cc-cvc').val(), cardType));
+                    $('.cc-brand').text(cardType);
+                    $('.validation').removeClass('text-danger text-success');
+                    $('.validation').addClass($('.has-error').length ? 'text-danger' : 'text-success');
+                    });
+                    });
+            </script>
+    </head>
+    <body>
+        <header>
+            <div class="homepage">
+                <div class="logo">
+                    <img src="Logo.png" alt="Logo">
+                    <a href="Honor.html">Thanks</a>
+                    <a href="Payment.html">Payment</a>
+                    <a href="Animal.html">Profiles</a>
+                    <a href="Login.html">Login</a>
+                    <a href="home.html">Homepage</a>
+            </div>
+        </header>
+        <div class="small-container cart-page">
+            <table class="center">
+                <tr>
+                    <th>Supply</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="1.jpg" alt="">
+                            <div>
+                                <p>FoodStuff</p>
+                                <small>Price: $980.0</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" value="0" id="number1" onclick="calculate();total();"></td>
+                    <td><input type="text" placeholder="$980" id="text1"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="2.jpg" alt="">
+                            <div>
+                                <p>FoodStuff 2</p>
+                                <small>Price: $1280.0</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" value="0" id="number2" onclick="calculate();total();"></td>
+                    <td><input type="text" placeholder="$1280" id="text2"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="3.jpg" alt="">
+                            <div>
+                                <p>FoodStuff 3</p>
+                                <small>Price: $1680.0</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" value="0" id="number3" onclick="calculate();total();"></td>
+                    <td><input type="text" placeholder="$1680" id="text3"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="4.png" alt="">
+                            <div>
+                                <p>Health Care</p>
+                                <small>Price: $480.0</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" value="0" id="number4" onclick="calculate();total();"></td>
+                    <td><input type="text" placeholder="$480" id="text4"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="cart-info">
+                            <img src="5.jpg" alt="">
+                            <div>
+                                <p>Health Care</p>
+                                <small>Price: $1080.0</small>
+                            </div>
+                        </div>
+                    </td>
+                    <td><input type="number" value="0" id="number5" onclick="calculate();total();"></td>
+                    <td><input type="text" placeholder="$1080" id="text5"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="total-price">
+            <table>
+                <tr>
+                    <td>Subtotal</td>
+                    <td><input type="text" id="text6"></td>
+                </tr>
+            </table>
+            </div>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.payment/3.0.0/jquery.payment.min.js"></script>
+<div class="padding">
+    <div class="row">
+        <div class="container-fluid d-flex justify-content-center">
+            <div class="col-sm-8 col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-6"> <span>CREDIT/DEBIT CARD PAYMENT</span> </div>
+                            <div class="col-md-6 text-right" style="margin-top: -5px;"> <img src="https://img.icons8.com/color/36/000000/visa.png"> <img src="https://img.icons8.com/color/36/000000/mastercard.png"> <img src="https://img.icons8.com/color/36/000000/amex.png"> </div>
+                        </div>
+                    </div>
+                    <div class="card-body" style="height: 350px">
+                        <div class="form-group"> <label for="cc-number" class="control-label">CARD NUMBER</label> <input id="cc-number" type="tel" class="input-lg form-control cc-number" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" required> </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group"> <label for="cc-exp" class="control-label">CARD EXPIRY</label> <input id="cc-exp" type="tel" class="input-lg form-control cc-exp" autocomplete="cc-exp" placeholder="•• / ••" required> </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group"> <label for="cc-cvc" class="control-label">CARD CVC</label> <input id="cc-cvc" type="tel" class="input-lg form-control cc-cvc" autocomplete="off" placeholder="••••" required> </div>
+                            </div>
+                        </div>
+                        <div class="form-group"> <label for="numeric" class="control-label">CARD HOLDER NAME</label> <input type="text" class="input-lg form-control"> </div>
+                        <div class="form-group"> <input value="MAKE PAYMENT" type="button" class="btn btn-success btn-lg form-control" style="font-size: .8rem;" onclick="javascript:location.href='Honor.html'"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+</html>
